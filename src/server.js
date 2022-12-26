@@ -6,7 +6,7 @@ const cors = require('cors');
 const { userController } = require('./controllers/users');
 
 const app = express();
-const port = 3000;
+const port = process.env.Port || 5000;
 
 app.use(cors());
 
