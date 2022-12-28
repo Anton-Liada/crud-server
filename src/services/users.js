@@ -2420,8 +2420,8 @@ function create(id, first_name, last_name, email, address, gender) {
     first_name,
     last_name,
     email,
-    gender,
     address,
+    gender,
   };
 
   users.push(newUser);
