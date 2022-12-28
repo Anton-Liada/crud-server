@@ -6,7 +6,7 @@ const cors = require('cors');
 const { userController } = require('./controllers/users');
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 
@@ -20,6 +20,4 @@ app.delete('/users/:userId', userController.remove);
 
 app.put('/users/:userId', express.json(), userController.update);
 
-app.listen(port, () => {
-  console.log('http://localhost:8000')
-});
+app.listen(port);
