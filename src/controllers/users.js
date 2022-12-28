@@ -28,8 +28,8 @@ const create = (req, res) => {
     first_name,
     last_name,
     email,
-    gender,
     address,
+    gender,
   } = req.body;
 
   const newUser = userServices.create(
@@ -37,8 +37,8 @@ const create = (req, res) => {
     first_name,
     last_name,
     email,
-    gender,
-    address
+    address,
+    gender
   );
 
   res.statusCode = 201;
